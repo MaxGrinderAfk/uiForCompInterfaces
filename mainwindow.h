@@ -163,7 +163,7 @@ private:
 
     void connectButtons() {
         connect(lab1, &QPushButton::clicked, this, []() {
-            QProcess::startDetached("pathToLab1.exe");
+            QProcess::startDetached("D:/IaMoC/laba1/lab1/build/Desktop_Qt_6_9_0_MinGW_64_bit-Release/lab1");
         });
 
         connect(lab2, &QPushButton::clicked, this, []() {
