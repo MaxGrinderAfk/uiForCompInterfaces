@@ -13,6 +13,7 @@
 #include <QPixmap>
 #include <QGraphicsDropShadowEffect>
 #include <QTimer>
+#include <QIcon>
 
 class MainWindow : public QMainWindow
 {
@@ -20,6 +21,8 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr) : QMainWindow(parent) {
+        this->setWindowIcon(icon);
+
         setMouseTracking(true);
         if (centralWidget()) {
             centralWidget()->setMouseTracking(true);
@@ -86,7 +89,7 @@ public:
         cursorPos = QPoint(width() / 2, height() / 2);
     }
 
-    ~MainWindow();
+    ~MainWindow() {}
 
 private:
     void resizeEvent(QResizeEvent* event) override {
@@ -207,7 +210,7 @@ private slots:
             dy = -dy;
         }
 
-        update();
+        update();        
     }
 
 private:
@@ -230,5 +233,6 @@ private:
     QPoint cursorPos;
     QPixmap animatedGhost = QPixmap(":/picturePrefix/picturesFold/ghostNew.png");
     QTimer* timer;
+    QIcon icon = QPixmap(":/picturePrefix/picturesFold/icon.jpg");
 };
 #endif // MAINWINDOW_H

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/picturePrefix">
+        <file>picturesFold/castleP.png</file>
+        <file>picturesFold/ghostNew.png</file>
+        <file>picturesFold/icon.jpg</file>
+    </qresource>
+</RCC>
